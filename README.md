@@ -74,6 +74,8 @@ TaskScreen.js
 assets/
 └── (optional images or icons)
 
+##DEMO
+[click Here to watch Demo video](assets\todoListDemo.mp4)
 ---
 
 ## Notes
