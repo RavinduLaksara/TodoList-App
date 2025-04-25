@@ -1,50 +1,85 @@
-# Welcome to your Expo app 👋
+# React Native To-Do List App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, minimal, and persistent To-Do List app built with React Native and Expo.  
+Features a dark theme with orange accents, custom modals, and persistent storage.  
+You can add, edit, mark, share, and delete tasks.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Add tasks** with title and description
+- **Mark tasks** as complete/incomplete with a checkbox
+- **Edit, share, and delete** tasks
+- **Custom delete confirmation modal** (see above)
+- **Persistent storage** using AsyncStorage
+- **Dark/orange modern UI** matching the provided design
 
-   ```bash
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+
+   ```
+   git clone <your-repo-url>
+   cd <your-project-folder>
+   ```
+
+2. **Install dependencies**
+
+   ```
    npm install
    ```
 
-2. Start the app
+3. **Install required packages**
 
-   ```bash
-    npx expo start
+   ```
+   npm install @react-navigation/native @react-navigation/native-stack
+   npm install @react-native-async-storage/async-storage
+   npm install react-native-vector-icons
+   npx expo install react-native-screens react-native-safe-area-context
    ```
 
-In the output, you'll find options to open the app in a
+4. **(Expo only) If you use Expo, install vector icons**
+   ```
+   npx expo install react-native-vector-icons
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## How to Run the App
 
-## Get a fresh project
+### **On Android/iOS (Expo)**
 
-When you're ready, run:
+1. **Start the Expo development server:**
+   ```
+   npx expo start
+   ```
+2. **On your phone:**
 
-```bash
-npm run reset-project
-```
+   - Download the **Expo Go** app from the [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent) or [Apple App Store](https://apps.apple.com/app/expo-go/id982107779).
+   - Scan the QR code shown in your terminal or browser after running `expo start`.
+   - The app will open on your device.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. **On an emulator/simulator:**
+   - For Android: Use Android Studio's AVD Manager to launch an emulator, then press `a` in the Expo CLI.
+   - For iOS: Use Xcode's simulator, then press `i` in the Expo CLI.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+App.js
+HomeScreen.js
+TaskScreen.js
+assets/
+└── (optional images or icons)
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Notes
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- All tasks are stored locally and will persist between app restarts.
+- The UI is fully responsive and works on both Android and iOS.
+- For custom branding or feature requests, edit the styles or components as needed.
+
+---
